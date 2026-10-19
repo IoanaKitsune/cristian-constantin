@@ -2,15 +2,13 @@
 import { hero } from "../data/content";
 ---
 
-<section id="top" class="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
+<section id="top" class="relative min-h-screen flex flex-col items-center justify-center px-6 pt-28 md:pt-24 overflow-hidden">
   <div
-    class="hero-bg-word pointer-events-none select-none absolute left-1/2 top-24 -translate-x-1/2 font-display text-[22vw] leading-none text-ink/5 whitespace-nowrap"
+    class="hero-bg-word pointer-events-none select-none absolute left-1/2 top-24 -translate-x-1/2 font-display text-[14vw] leading-none text-ink/5 whitespace-nowrap"
     aria-hidden="true"
   >
-    KINETIC
+    KRISTINETIC
   </div>
-
-  <p class="hero-fade text-xs tracking-wide-caps text-accent mb-6">{hero.eyebrow}</p>
 
   <p class="hero-fade font-display italic text-muted text-lg mb-2">{hero.tagline}</p>
 
@@ -24,7 +22,7 @@ import { hero } from "../data/content";
   </p>
 
   <div class="hero-image relative w-56 h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden border border-line bg-bg-elevated">
-    <div class="absolute inset-0 bg-gradient-to-br from-accent-soft/40 via-bg-elevated to-bg"></div>
+    <img src={hero.imageSrc} alt={hero.imageAlt} class="absolute inset-0 w-full h-full object-cover" />
   </div>
 
   <div class="hero-fade mt-16 w-full max-w-4xl flex items-center justify-between text-[11px] tracking-wide-caps text-muted">
