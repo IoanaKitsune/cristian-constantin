@@ -1,0 +1,40 @@
+---
+import { hero } from "../data/content";
+---
+
+<section id="top" class="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
+  <div
+    class="hero-bg-word pointer-events-none select-none absolute left-1/2 top-24 -translate-x-1/2 font-display text-[22vw] leading-none text-ink/5 whitespace-nowrap"
+    aria-hidden="true"
+  >
+    KINETIC
+  </div>
+
+  <p class="hero-fade text-xs tracking-wide-caps text-accent mb-6">{hero.eyebrow}</p>
+
+  <p class="hero-fade font-display italic text-muted text-lg mb-2">{hero.tagline}</p>
+
+  <h1 class="hero-fade font-display text-center text-4xl md:text-6xl leading-tight mb-6">
+    {hero.titleLine1}<br />
+    <span class="italic text-accent">{hero.titleLine2}</span>
+  </h1>
+
+  <p class="hero-fade max-w-md text-center text-muted text-sm md:text-base mb-12">
+    {hero.subtitle}
+  </p>
+
+  <div class="hero-image relative w-56 h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden border border-line bg-bg-elevated">
+    <div class="absolute inset-0 bg-gradient-to-br from-accent-soft/40 via-bg-elevated to-bg"></div>
+  </div>
+
+  <div class="hero-fade mt-16 w-full max-w-4xl flex items-center justify-between text-[11px] tracking-wide-caps text-muted">
+    <span>{hero.footNoteLeft}</span>
+    <span class="flex items-center gap-2 text-ink">
+      Explore
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 animate-bounce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M19 12l-7 7-7-7" />
+      </svg>
+    </span>
+    <span>{hero.footNoteRight}</span>
+  </div>
+</section>
