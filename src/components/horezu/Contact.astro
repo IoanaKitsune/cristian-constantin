@@ -1,0 +1,31 @@
+---
+import { contact, site } from "../../data/content-horezu";
+---
+
+<section id="contact" class="relative px-6 py-32 flex flex-col items-center text-center">
+  <p class="reveal text-xs tracking-wide-caps text-accent mb-3">{contact.eyebrow}</p>
+  <h2 class="reveal font-display text-4xl md:text-5xl mb-4">{contact.title}</h2>
+  <p class="reveal text-muted text-sm max-w-sm mb-14">{contact.subtitle}</p>
+
+  <div class="reveal flex flex-col md:flex-row items-center gap-10 md:gap-16 border border-line rounded-2xl px-10 py-8 mb-12">
+    <div class="flex flex-col items-center">
+      <span class="text-[10px] tracking-wide-caps text-muted mb-2">{contact.phoneLabel}</span>
+      <span class="font-display text-xl text-ink">{site.phone}</span>
+    </div>
+    <div class="hidden md:block w-px h-10 bg-line"></div>
+    <div class="flex flex-col items-center">
+      <span class="text-[10px] tracking-wide-caps text-muted mb-2">{contact.locationLabel}</span>
+      <span class="font-display text-xl text-ink">{site.locations}</span>
+    </div>
+  </div>
+
+  <a
+    href={site.phoneHref}
+    class="reveal inline-flex items-center gap-2 text-xs tracking-wide-caps bg-accent text-bg rounded-full px-8 py-4 hover:bg-accent/90 transition-colors"
+  >
+    Contacteaza-ma
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M7 17 17 7M7 7h10v10" />
+    </svg>
+  </a>
+</section>

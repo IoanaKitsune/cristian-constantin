@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/horezu/Header.astro";
+import Hero from "../components/horezu/Hero.astro";
+import About from "../components/horezu/About.astro";
+import Services from "../components/horezu/Services.astro";
+import Philosophy from "../components/horezu/Philosophy.astro";
+import RomaniaMap from "../components/horezu/RomaniaMap.astro";
+import Contact from "../components/horezu/Contact.astro";
+import Footer from "../components/horezu/Footer.astro";
+import { site } from "../data/content-horezu";
+---
+
+<Layout
+  title={`${site.name} — ${site.role}`}
+  description={`${site.name}, ${site.role} in ${site.locations}. Personalized physical therapy and rehabilitation.`}
+>
+  <Header />
+  <main>
+    <Hero />
+    <About />
+    <Services />
+    <Philosophy />
+    <RomaniaMap />
+    <Contact />
+  </main>
+  <Footer />
+
+  <script src="../scripts/animations.ts"></script>
+</Layout>

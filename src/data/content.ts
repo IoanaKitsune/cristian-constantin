@@ -3,7 +3,7 @@
 export const site = {
   name: "Cristian Constantin",
   role: "Kinetoterapeut",
-  locations: "Bucuresti · Romania",
+  locations: "București · România",
   phone: "+40 700 000 000",
   phoneHref: "tel:+40700000000",
 };
@@ -16,24 +16,24 @@ export const nav = [
 ];
 
 export const hero = {
-  tagline: "Recucereste-ti libertatea de miscare",
-  titleLine1: "Puterea de a te misca din nou &",
+  tagline: "Recucerește-ți libertatea de mișcare",
+  titleLine1: "Puterea de a te mișca din nou &",
   titleLine2: "REABILITARE",
-  subtitle: "Un plan de recuperare croit exact pe nevoile si ritmul tau.",
+  subtitle: "Un plan de recuperare croit exact pe nevoile și ritmul tău.",
   imageSrc: "/assets/images/cristi1.jfif",
   imageAlt: "Cristian Constantin, Kinetoterapeut",
-  footNoteLeft: "DPT · Kinetoterapeut licentiat",
-  footNoteRight: "Neurologie si geriatrie",
+  footNoteLeft: "DPT · Kinetoterapeut licențiat",
+  footNoteRight: "Neurologie și geriatrie",
 };
 
 export const about = {
   eyebrow: "Despre mine",
-  title: "Menit sa ajut.",
-  quote: "Recuperarea e o lupta continua intre durerea de a fi confortabil si disconfortul de a fi in durere.",
-  body: "Lucrez cu pacienti afectati neurologic de diverse traume, ajutandu-i sa isi recastige independenta pas cu pas.",
+  title: "Menit să ajut.",
+  quote: "Recuperarea e o luptă continuă între durerea de a fi confortabil și disconfortul de a fi în durere.",
+  body: "Lucrez cu pacienți afectați neurologic de diverse traume, ajutându-i să își recâștige independența pas cu pas.",
   stats: [
-    { value: "15+", label: "Ani de experienta" },
-    { value: "1,000+", label: "Pacienti tratati" },
+    { value: "15+", label: "Ani de experiență" },
+    { value: "1,000+", label: "Pacienți tratați" },
     { value: "100%", label: "Tratament personalizat" },
   ],
   educationImageSrc: "/assets/images/cristi4.jpeg",
@@ -41,17 +41,17 @@ export const about = {
   education: {
     title: "Studii",
     items: [
-      "Facultatea de Educatie Fizica si Sport, specializarea Kinetoterapie",
-      "Licenta in Kinetoterapie si Motricitate Speciala",
+      "Facultatea de Educație Fizică și Sport, specializarea Kinetoterapie",
+      "Licență în Kinetoterapie și Motricitate Specială",
     ],
   },
   specializations: {
-    title: "Specializari",
+    title: "Specializări",
     items: [
-      "Recuperare neurologica",
-      "Kinetoterapie geriatrica",
-      "Recuperare post-traumatica si sportiva",
-      "Terapie manuala si mobilizare articulara",
+      "Recuperare neurologică",
+      "Kinetoterapie geriatrică",
+      "Recuperare post-traumatică și sportivă",
+      "Terapie manuală și mobilizare articulară",
     ],
   },
 };
@@ -60,31 +60,31 @@ export const services = {
   eyebrow: "Ce ofer",
   title: "Servicii",
   imageSrc: "/assets/images/cristi3.jpeg",
-  imageAlt: "Sedinta de kinetoterapie",
-  imageCaption: "Sedinte la domiciliu · Bucuresti",
+  imageAlt: "Ședință de kinetoterapie",
+  imageCaption: "Ședințe la domiciliu · București",
   list: [
     {
       number: "01",
       tag: "Evaluare",
-      title: "Prima intalnire, prima strategie",
+      title: "Prima întâlnire, prima strategie",
       duration: "60 min",
     },
     {
       number: "02",
       tag: "Mobilizare",
-      title: "Redam libertatea articulatiilor",
+      title: "Redăm libertatea articulațiilor",
       duration: "30 min",
     },
     {
       number: "03",
       tag: "Reabilitare",
-      title: "Un plan construit pentru progresul tau",
+      title: "Un plan construit pentru progresul tău",
       duration: "45 min",
     },
     {
       number: "04",
-      tag: "Performanta",
-      title: "Revenire dupa accidentari sportive",
+      tag: "Performanță",
+      title: "Revenire după accidentări sportive",
       duration: "60 min",
     },
   ],
@@ -99,19 +99,19 @@ export const philosophy = {
       level: "01",
       title: "Ascult",
       points: [
-        "Evaluarea meticuloasa a capacitatii motorii si a istoricului medical",
-        "Intelegerea neajunsurilor",
-        "Gasirea cauzei",
+        "Evaluarea meticuloasă a capacității motorii și a istoricului medical",
+        "Înțelegerea neajunsurilor",
+        "Găsirea cauzei",
       ],
       featured: false,
     },
     {
       level: "02",
-      title: "Actionez",
+      title: "Acționez",
       points: [
-        "Creearea unui plan de tratament mulat pe nevoi si potential",
+        "Crearea unui plan de tratament mulat pe nevoi și potențial",
         "Tehnici bazate pe neuroplasticitate",
-        "Exercitii de facut individual acasa",
+        "Exerciții de făcut individual acasă",
       ],
       featured: false,
     },
@@ -129,11 +129,11 @@ export const philosophy = {
 };
 
 export const contact = {
-  eyebrow: "Hai sa ne auzim",
+  eyebrow: "Hai să ne auzim",
   title: "Primul pas spre recuperare",
-  subtitle: "Suna sau lasa-mi un mesaj si stabilim impreuna o sedinta de evaluare",
+  subtitle: "Sună sau lasă-mi un mesaj și stabilim împreună o ședință de evaluare",
   phoneLabel: "Telefon",
-  locationLabel: "Locatie",
+  locationLabel: "Locație",
 };
 
 export const footer = {

@@ -1,0 +1,79 @@
+---
+import { romaniaCounties, romaniaMapViewBox } from "../../data/romania-counties";
+import { gagiciMap } from "../../data/content-horezu";
+---
+
+<section id="map" class="relative px-6 py-32 flex flex-col items-center text-center">
+  <p class="reveal text-xs tracking-wide-caps text-accent mb-3">{gagiciMap.eyebrow}</p>
+  <h2 class="reveal font-display text-4xl md:text-5xl mb-4">{gagiciMap.title}</h2>
+  <p class="reveal text-muted text-sm max-w-md mb-16">{gagiciMap.subtitle}</p>
+
+  <div class="reveal relative w-full max-w-3xl">
+    <svg
+      id="romania-map"
+      viewBox={romaniaMapViewBox}
+      class="w-full h-auto"
+      role="img"
+      aria-label="Harta judetelor Romaniei"
+    >
+      {romaniaCounties.map((county) => (
+        <path
+          d={county.d}
+          data-id={county.id}
+          data-name={county.name}
+          data-count={gagiciMap.countyCounts[county.id] ?? 0}
+          class="county fill-bg-elevated stroke-line transition-colors cursor-pointer hover:fill-accent hover:stroke-accent"
+          stroke-width="1"
+        />
+      ))}
+    </svg>
+
+    <div
+      id="map-tooltip"
+      class="pointer-events-none absolute hidden rounded-xl border border-line bg-bg px-4 py-2 text-left shadow-lg"
+    >
+      <p id="map-tooltip-name" class="font-display text-sm text-ink"></p>
+      <p id="map-tooltip-count" class="text-xs text-muted mt-0.5"></p>
+    </div>
+  </div>
+</section>
+
+<script>
+  function initRomaniaMap() {
+    const svg = document.querySelector<SVGSVGElement>("#romania-map");
+    const tooltip = document.querySelector<HTMLDivElement>("#map-tooltip");
+    const tooltipName = document.querySelector<HTMLParagraphElement>("#map-tooltip-name");
+    const tooltipCount = document.querySelector<HTMLParagraphElement>("#map-tooltip-count");
+    if (!svg || !tooltip || !tooltipName || !tooltipCount) return;
+
+    const wrapper = svg.parentElement as HTMLElement;
+
+    svg.querySelectorAll<SVGPathElement>(".county").forEach((county) => {
+      county.addEventListener("mousemove", (event) => {
+        const name = county.dataset.name ?? "";
+        const count = county.dataset.count ?? "0";
+
+        tooltipName.textContent = name;
+        tooltipCount.textContent = `${count} gagici raportate`;
+
+        const rect = wrapper.getBoundingClientRect();
+        const x = (event as MouseEvent).clientX - rect.left;
+        const y = (event as MouseEvent).clientY - rect.top;
+
+        tooltip.style.left = `${x + 14}px`;
+        tooltip.style.top = `${y + 14}px`;
+        tooltip.classList.remove("hidden");
+      });
+
+      county.addEventListener("mouseleave", () => {
+        tooltip.classList.add("hidden");
+      });
+    });
+  }
+
+  if (document.readyState === "complete" || document.readyState === "interactive") {
+    initRomaniaMap();
+  } else {
+    document.addEventListener("DOMContentLoaded", initRomaniaMap);
+  }
+</script>
